@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Encryption</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Email Encryption</h2>
+        <div class="input-field">
+            <label>Email:</label>
+            <input type="email" id="emailInput" required>
+        </div>
+        <button class="btn" onclick="encryptEmail()">Encrypt</button>
+        <div class="result" id="resultContainer"></div>
+    </div>
+
+    <script>
+        function encryptEmail() {
+            var email = document.getElementById('emailInput').value;
+            // You can use your preferred encryption algorithm/library here
+            var encryptedEmail = btoa(email);
+            document.getElementById('resultContainer').textContent = encryptedEmail;
+        }
+    </script>
+</body>
+</html>
